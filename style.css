@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #ffffff;
+}
+
+.logo {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+}
+
+nav {
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff2f4e;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.detail {
+    max-width: 50%;
+}
+
+.detail h1 {
+    font-size: 50px;
+    color: #ff2f4e;
+    margin-bottom: 20px;
+}
+
+.detail-home h1 {
+    font-size: 45px;
+    color: #ff2f4e;
+    margin-bottom: 20px;
+}
+
+.detail-home p {
+    color: #000000;
+    line-height: 22px;
+}
+
+span {
+    font-style: italic;
+    color: #ff2f4e;
+}
+
+.detail p {
+    color: #000000;
+    line-height: 22px;
+}
+
+.detail a {
+    background: #ff2f4e;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight:lighter;
+    color: #000000;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 30px;
+    border: 2px solid #ff2f4e;
+}
+
+.wrapper .form-box {
+    background: white;
+    padding: 0 70px 5px 70px;
+    border-radius: 5px;
+}
+
+.wrapper .form-box-signup {
+    padding: 0 70px 5px 70px;
+    
+}
+
+.wrapper .form-box-signup h2 {
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.wrapper .form-box h2 {
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.wrapper .input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff2f4e;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.wrapper .input-box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.wrapper .input-box input:focus + label,
+.wrapper .input-box input:not(:placeholder-shown) + label {
+    top: -20px;
+    left: 10px;
+    font-size: 12px;
+    color: #000000;
+}
+
+.wrapper .btn {
+    width: 50%;
+    margin-left: 27%;
+    margin-top: -40%;
+    padding: 10px;
+    border: none;
+    background-color: #ff2f4e;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.wrapper .btn:hover {
+    background-color: #ff5174;
+}
+
+.wrapper .login-register p {
+    margin: 15px 0 0;
+    text-align: center;
+}
+
+.wrapper .login-register a {
+    color: #ff2f4e;
+    text-decoration: none;
+}
+
+.images {
+    width: 45%;
+    height: 91%;
+    position: absolute;
+    bottom: 0;
+    right: 75px;
+}
+
+.images img {
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-40%);
+    transition: bottom 1s, left 1s;
+}
+
+.images .shape {
+    transform: translate(10%);
+    margin-top: 5%;
+}
+
+.images:hover .shape {
+    animation: moveShape 1.5s forwards;
+}
+
+@keyframes moveShape {
+    0% {
+        transform: translate(5%, 0px);
+    }
+    100% {
+        transform: translate(5%, -15px);
+    }
+}
+
+.images:hover .marjorie{
+    left: 45%;
+}
+
+.profile-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column; /* Change to column to stack elements */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 0 8%;
+    margin-top: 20px; /* Add some space between profile header and content */
+}
+
+.profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 2%;
+    margin-left: -25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF5F5F; /* Add background color for default avatar */
+    color: white;
+    border: 1px solid #FF5F5F;
+}
+
+.profile-pic img, .profile-pic .default-avatar-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.default-avatar-icon {
+    font-size: 50px;
+    color: #ccc;
+}
+
+.group-button {
+    width: 70%; /* Adjust width to fit two elements per row */
+    margin-bottom: 20px; /* Add space between form groups */
+    margin-top: 20px;
+    padding-left: 5px;
+    align-items: center;
+    align-content: center;
+}
+
+.buttons input {
+    flex-direction: column;
+    width: 110%;
+    height: 40%;
+}
+
+.group-button .remove-pic {
+    margin-left: -60px;
+    margin-top: 55px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction:row;
+}
+
+.btn {
+    background-color: #FF5F5F;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.edit-form h1 {
+    color: #FF5F5F;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    margin-left: -80%;
+    font-size: 40px;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap */
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.form-group {
+    width: 48%; /* Adjust width to fit two elements per row */
+    margin-bottom: 10px; /* Add space between form groups */
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: flex;
+}
+
+input {
+    width: calc(100% - 20px); /* Adjust input width to fit within form group */
+    padding: 10px;
+    border: 2px solid #FF5F5F;
+    border-radius: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    justify-content: flex-end; /* Align buttons to the start */
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: -40px;
+}
+
+.update-btn, .delete-btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.update-btn {
+    background-color: #FF5F5F;
+}
+
+.delete-btn {
+    background-color: #FF5F5F;
+}
